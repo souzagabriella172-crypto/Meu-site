@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ensino - DFCom UFF</title>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #333;
+      }
+
+      /* MENU FIXO */
+      header {
+        background-color: #003366;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .menu {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.1rem;
+        transition: 0.3s ease;
+      }
+
+      .menu a:hover {
+        color: #ffcc00;
+      }
+
+      /* TÍTULO + DESCRIÇÃO */
+      main.ensino {
+        max-width: 1100px;
+        margin: 120px auto 60px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      main h1 {
+        color: #00529b;
+        margin-bottom: 10px;
+      }
+
+      main p.descricao {
+        color: #444;
+        margin-bottom: 40px;
+        font-size: 1.1rem;
+      }
+
+      /* CARDS */
+      .grade-ensino {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 35px;
+        margin-top: 40px;
+      }
+
+      .card-ensino {
+        width: 260px;
+        aspect-ratio: 1 / 1;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: 0.3s ease;
+      }
+
+      .card-ensino:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-ensino img {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+      }
+
+      .card-ensino h3 {
+        margin: 10px 0 5px;
+        color: #003366;
+      }
+
+      .card-ensino p {
+        color: #555;
+        padding: 0 10px;
+      }
+
+      /* ÁREAS DETALHADAS */
+      section.conteudo {
+        max-width: 900px;
+        margin: 80px auto;
+        padding: 30px;
+        background: #f7f9fc;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      section.conteudo h2 {
+        color: #003366;
+        margin-bottom: 15px;
+      }
+
+      .lista li {
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+
+      /* RODAPÉ */
+      footer {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 40px;
+      }
+      #logo-dfcom {
+        margin-top: -80px !important; /* puxa para cima */
+      }
+      .grade-publicacoes {
+        margin-top: -30px !important;
+      }
+      .descricao {
+        position: relative !important;
+        top: -20px !important; /* sobe de verdade */
+        margin-top: 0 !important;
+      }
+      .logo-ensino {
+        width: 900px;
+        display: block;
+        margin: 0 auto;
+        margin-top: -40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- MENU -->
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">O DFCom</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- TÍTULO + CARDS -->
+    <main class="ensino">
+      <!-- LOGO NO LUGAR DO TÍTULO ENSINO -->
+      <img
+        src="3.png"
+        alt="Logo Ensino"
+        class="logo-ensino"
+        style="
+          height: 600px;
+          width: auto;
+          display: block;
+          margin: -200px auto 0 auto;
+        "
+      />
+
+      <p class="descricao">
+        Explore nossas disciplinas, mini-cursos e palestras oferecidos pelo
+        DFCom.
+      </p>
+      <section class="grade-ensino">
+        <div class="card-ensino">
+          <a href="#disciplinas">
+            <img
+              src="https://network.grupoabril.com.br/wp-content/uploads/sites/4/2016/12/gestc3a3o.jpg?quality=70&strip=all"
+            />
+          </a>
+          <h3>Disciplinas</h3>
+          <p>Informações sobre as disciplinas oferecidas.</p>
+        </div>
+
+        <div class="card-ensino">
+          <a href="#minicursos">
+            <img
+              src="https://doity.com.br/blog/app/uploads/2022/05/Saiba-como-elaborar-um-minicurso-academico-em-7-passos-930x534.png"
+            />
+          </a>
+          <h3>Mini-cursos</h3>
+          <p>Mini-cursos para complementar sua formação.</p>
+        </div>
+
+        <div class="card-ensino">
+          <a href="#palestras">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqPzjyjHTS6cnkDfU-83B2VmFKyqEETOl3jw&s"
+            />
+          </a>
+          <h3>Palestras</h3>
+          <p>Palestras ministradas por professores e convidados.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- SEÇÕES DETALHADAS -->
+    <section id="disciplinas" class="conteudo">
+      <h2>Disciplinas</h2>
+      <ul class="lista">
+        <li>
+          <strong>Artigo 1:</strong> Resumo da disciplina...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="minicursos" class="conteudo">
+      <h2>Mini-cursos</h2>
+      <ul class="lista">
+        <li>
+          <strong>Mini-curso 1:</strong> Resumo...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+        <li>
+          <strong>Mini-curso 2:</strong> Resumo...
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </li>
+        <li>
+          <strong>Mini-curso 3:</strong> Resumo...
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="palestras" class="conteudo">
+      <h2>Palestras</h2>
+      <ul class="lista">
+        <li>
+          <strong>Palestra 1:</strong> Resumo...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>© 2025 Universidade Federal Fluminense - DFCom.</footer>
+  </body>
+</html>

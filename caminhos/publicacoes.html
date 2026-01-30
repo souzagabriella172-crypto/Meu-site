@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publicações - DFCom UFF</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #ffffff;
+        color: #333;
+      }
+
+      /* MENU */
+      header {
+        background-color: #003366;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .menu {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      .menu a:hover {
+        color: #ffcc00;
+      }
+
+      /* CONTEÚDO PRINCIPAL */
+      main.publicacoes {
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Estilo da logo */
+      .logo-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .logo-container img {
+        width: 400px; /* solicitado */
+        max-width: 90%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .descricao {
+        margin-top: 10px;
+        color: #333;
+      }
+
+      /* CARDS */
+      .grade-publicacoes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 35px;
+        margin-top: 10px;
+      }
+
+      .card-publicacao {
+        width: 260px;
+        aspect-ratio: 1 / 1;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .card-publicacao:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-publicacao img {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+      }
+
+      .card-publicacao h3 {
+        margin: 10px 0 5px;
+        color: #003366;
+        font-size: 1.1rem;
+      }
+
+      .card-publicacao p {
+        color: #555;
+        font-size: 0.9rem;
+        padding: 0 10px;
+      }
+
+      /* SEÇÕES (empurradas para baixo para não aparecer na entrada) */
+      .conteudo {
+        margin: 220px auto; /* mantive o espaçamento pedido */
+        padding: 30px;
+        width: 90%;
+        max-width: 900px;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        text-align: left;
+        scroll-margin-top: 120px;
+      }
+
+      .conteudo h2 {
+        color: #003366;
+        margin-bottom: 15px;
+      }
+
+      .conteudo ul li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+
+      /* RODAPÉ */
+      footer {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 40px;
+      }
+      /* Forçar logo a 400px e remover limites de regras anteriores */
+      #logo-dfcom {
+        height: 600px !important;
+        width: auto !important;
+        max-width: none !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      #logo-dfcom {
+        margin-top: -70px !important; /* puxa para cima */
+      }
+      .grade-publicacoes {
+        margin-top: -30px !important;
+      }
+      .descricao {
+        position: relative !important;
+        top: -50px !important; /* sobe de verdade */
+        margin-top: 0 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- MENU -->
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">O DFCom</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="publicacoes">
+      <img
+        id="logo-dfcom"
+        src="Publicações (2).png"
+        alt="Logo de Publicações"
+        style="
+          height: 600px;
+          width: auto;
+          display: block;
+          margin: -200px auto 0 auto;
+        "
+      />
+      <p class="descricao">
+        Acesse os materiais completos produzidos pelos pesquisadores do DFCom.
+      </p>
+
+      <!-- CARDS QUE LEVAM PARA AS SEÇÕES -->
+      <section class="grade-publicacoes">
+        <a href="#periodicos" style="text-decoration: none; color: inherit">
+          <div class="card-publicacao">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcWzbsLLWPMbH42SDW1ZCli_YwkSuKE3UiWg&s"
+              alt="Periódicos"
+            />
+            <h3>Periódicos</h3>
+            <p>Acesse as pesquisas do departamento.</p>
+          </div>
+        </a>
+
+        <a href="#livros" style="text-decoration: none; color: inherit">
+          <div class="card-publicacao">
+            <img
+              src="https://sophia.com.br/wp-content/uploads/2022/03/Conservar-os-livros-da-biblioteca_18235_image.freepik.com_1-926858.jpeg"
+              alt="Livros"
+            />
+            <h3>Livros</h3>
+            <p>Livros completos e organizados por título.</p>
+          </div>
+        </a>
+
+        <a href="#capitulos" style="text-decoration: none; color: inherit">
+          <div class="card-publicacao">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbEJByiRVhLahGummpajlgZzwPmp7tegv84w&s"
+              alt="Capítulos"
+            />
+            <h3>Capítulos</h3>
+            <p>Capítulos escritos por pesquisadores.</p>
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <!-- SEÇÕES DE CONTEÚDO COMPLETO -->
+    <section id="periodicos" class="conteudo">
+      <h2>Periódicos</h2>
+      <ul>
+        <li>
+          <strong>Artigo 1:</strong> Resumo do periódico...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+        <li>
+          <strong>Artigo 2:</strong> Conteúdo do artigo...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+        <li>
+          <strong>Artigo 3:</strong> Informações...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="livros" class="conteudo">
+      <h2>Livros</h2>
+      <ul>
+        <li>
+          <strong>Livro 1:</strong> Resumo do livro...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+        <li>
+          <strong>Livro 2:</strong> Descrição...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+        <li>
+          <strong>Livro 3:</strong> Resuminho aqui...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="capitulos" class="conteudo">
+      <h2>Capítulos</h2>
+      <ul>
+        <li>
+          <strong>Capítulo 1:</strong> Descrição...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque vulputate lectus
+            dui, a auctor nisi tempor quis.
+          </p>
+        </li>
+        <li>
+          <strong>Capítulo 2:</strong> Texto...
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
+            sapien rhoncus, scelerisque ante in, auctor tortor. In malesuada
+            neque orci, a facilisis magna efficitur et. Donec eu dolor quam. In
+            a tellus ullamcorper orci fringilla lobortis ac vel turpis. Nunc
+            aliquam vel eros a ornare. Maecenas urna urna, condimentum sit amet
+            sagittis vel, posuere vel nisl. Sed mollis magna fermentum, viverra
+            dui non, ullamcorper felis. Aliquam pellentesque, lacus nec varius
+            faucibus, ex augue consequat turpis, mattis tristique ex nibh nec
+            nibh. Quisque eget purus non mi commodo interdum nec eget purus.
+            Duis ac velit sodales, vehicula eros sit amet, feugiat velit.
+            Phasellus vulputate sagittis ex quis posuere. Nullam nunc metus,
+            sollicitudin in est in, gravida accumsan libero. Pellentesque dui
+            nisi, facilisis ac ullamcorper et, blandit in diam. Sed porta
+            consectetur mauris, ac laoreet diam viverra quis. Duis vulputate
+            euismod ex, quis eleifend eros semper quis. Maecenas malesuada
+            tellus sit amet lorem scelerisque maximus. Quisque rutrum magna in
+            ipsum pulvinar faucibus. Fusce nisl leo, consectetur nec erat sit
+            amet, imperdiet dapibus nulla. Vivamus et ex sed mauris auctor
+            placerat et quis metus. Mauris vitae risus eu lectus mattis tempus
+            vitae at erat. Quisque et massa erat. Cras tempor felis et massa
+            dictum, et convallis mauris pulvinar. Pellentesque vehicula sagittis
+            nulla, non fermentum justo tincidunt nec. Quisque
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>© 2025 Universidade Federal Fluminense - DFCom.</footer>
+  </body>
+</html>
