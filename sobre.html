@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre - DFCom UFF</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* ======================================= */
+      /*                 HEADER                  */
+      /* ======================================= */
+      header {
+        background-color: #003366;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: 0.3s ease;
+        font-family: Arial, sans-serif;
+      }
+
+      nav a:hover {
+        color: #ffcc00;
+      }
+
+      /* ======================================= */
+      /*               CONTEÚDO                  */
+      /* ======================================= */
+      main {
+        max-width: 1000px;
+        margin: 120px auto 40px auto;
+        padding: 0 20px;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        color: #003366;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      /* ======================================= */
+      /*                CARDS B                  */
+      /* ======================================= */
+      .cards-brancos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+      }
+
+      .card-branco {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+        border-left: 5px solid #003366;
+      }
+
+      .card-branco:hover {
+        transform: translateY(-3px);
+      }
+
+      .card-branco h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.4rem;
+        color: #003366;
+      }
+
+      .card-branco p {
+        margin: 0;
+        color: #444;
+      }
+
+      /* ======================================= */
+      /*                  RODAPÉ                 */
+      /* ======================================= */
+      footer {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ========== HEADER ========== -->
+    <
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">O DFCom</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ========== CONTEÚDO ========== -->
+    <main>
+      <h1>O que fazemos?</h1>
+      <p>
+        Estudamos sistemas dinâmicos — modelos matemáticos usados para descrever
+        e prever como fenômenos evoluem com o tempo. Eles têm origem na mecânica
+        Newtoniana e hoje são essenciais para entender desde movimentos simples,
+        como o de um pêndulo, até dinâmicas extremamente complexas, como o clima
+        global.
+      </p>
+
+      <p>
+        Nosso foco principal é estudar sistemas dinâmicos aplicados a fenômenos
+        de transporte: mecânica dos fluidos, transferência de calor e de massa.
+      </p>
+
+      <h1>Como fazemos?</h1>
+
+      <div class="cards-brancos">
+        <div class="card-branco">
+          <h3>1) Análise de estabilidade linear</h3>
+          <p>
+            Investigamos versões linearizadas dos sistemas, assumindo pequenas
+            perturbações para entender o comportamento próximo ao equilíbrio.
+          </p>
+        </div>
+
+        <div class="card-branco">
+          <h3>2) Análise não-linear de baixa dimensão</h3>
+          <p>
+            Utilizamos modelos reduzidos obtidos por métodos como Galerkin
+            truncado e técnicas modernas de aprendizado de máquina.
+          </p>
+        </div>
+
+        <div class="card-branco">
+          <h3>3) Simulação numérica direta</h3>
+          <p>
+            Simulamos o sistema completo, permitindo observar comportamentos
+            instáveis, transientes e padrões emergentes.
+          </p>
+        </div>
+      </div>
+
+      <h1>Por que fazemos?</h1>
+      <p>
+        “Tudo vale a pena se a alma não é pequena.” — Fernando Pessoa. Entender
+        sistemas dinâmicos é entender o funcionamento profundo da natureza. É
+        produzir conhecimento que explica o mundo.
+      </p>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>© 2025 Universidade Federal Fluminense - DFCom.</footer>
+  </body>
+</html>
